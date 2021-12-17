@@ -12,6 +12,8 @@
     "copy-to-clipboard": "^3.3.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-router": "^6.1.1",
+    "react-router-dom": "^6.1.1",
     "typescript": "^4.4.3"
   },
   "scripts": {
@@ -21,12 +23,14 @@
     "snowpack": "snowpack dev",
     "snowpack-build": "snowpack build",
     "vite": "vite",
-    "vite-build": "vite build"
+    "vite-build": "vite build",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "prettier"
     ]
   },
   "browserslist": {
@@ -45,14 +49,26 @@
     "@snowpack/plugin-dotenv": "^2.0.5",
     "@snowpack/plugin-react-refresh": "^2.3.8",
     "@snowpack/plugin-typescript": "^1.1.1",
+    "@types/react-router": "^5.1.17",
+    "@types/react-router-dom": "^5.3.2",
+    "@typescript-eslint/eslint-plugin": "^5.6.0",
+    "@typescript-eslint/parser": "^5.6.0",
     "@vitejs/plugin-react": "^1.1.0",
     "@vue/compiler-sfc": "^3.0.4",
+    "babel-eslint": "^10.1.0",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.5.1",
+    "eslint": "^8.4.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.27.1",
     "express": "^4.17.1",
     "file-loader": "^6.2.0",
     "fork-ts-checker-webpack-plugin": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.2",
     "monaco-editor-webpack-plugin": "^6.0.0",
     "prettier": "^2.2.1",
     "snowpack": "^3.8.8",
@@ -64,5 +80,8 @@
     "webpack-cli": "^4.7.2",
     "webpack-dev-middleware": "^5.2.2",
     "webpack-dev-server": "^4.6.0"
+  },
+  "lint-staged": {
+    "*.{js,css,md,ts,tsx,json}": "prettier --write"
   }
 }
