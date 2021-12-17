@@ -4,8 +4,8 @@
   "useTabs": false,
   "singleQuote": true,
   "semi": true,
-  "trailingComma": "none",
-  "bracketSpacing": false,
+  "trailingComma": "all",
+  "bracketSpacing": true,
   "quoteProps": "consistent",
   "arrowParens": "avoid",
   "jsxBracketSameLine": false
