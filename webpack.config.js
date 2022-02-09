@@ -63,7 +63,7 @@ module.exports = {
       'hooks': path.resolve(__dirname, './src/hooks'),
       'contexts': path.resolve(__dirname, './src/contexts'),
       'stores': path.resolve(__dirname, './src/stores'),
-      'react': path.resolve('./node_modules/react'),
+      // 'react': path.resolve('./node_modules/react'),
     },
   },
   devtool: 'inline-source-map',
