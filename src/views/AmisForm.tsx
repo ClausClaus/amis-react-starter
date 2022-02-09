@@ -1,28 +1,39 @@
 import Schema2component from '@/utils/Schema2component';
 import { Schema } from 'amis/lib/types';
+// https://github.com/baidu/amis/issues/170
+import '@/components/DataManage';
 
 const schema: Schema = {
-  type: 'page',
+  type: 'data-manage',
+  tip: 'xxxxx',
   body: [
     {
-      type: 'form',
-      initApi: '/api/users',
-      api: '/api/form',
+      type: 'page',
       body: [
         {
-          type: 'input-text',
-          name: 'name',
-          label: '姓名：',
-        },
-        {
-          type: 'input-email',
-          name: 'word',
-          label: '邮箱：',
-        },
-        {
-          type: 'wrapper',
-          label: '参数',
-          body: 'word ${word}',
+          type: 'form',
+          debug: true,
+          initApi: '/api/users',
+          api: '/api/form',
+          body: [
+            {
+              type: 'input-text',
+              name: 'name',
+              label: '姓名：',
+              value: 'SmileXin',
+            },
+            {
+              type: 'input-email',
+              name: 'word',
+              label: '邮箱：',
+              value: 'weixinla@gmail.com',
+            },
+            {
+              type: 'wrapper',
+              label: '参数',
+              body: 'word ${word}',
+            },
+          ],
         },
       ],
     },
